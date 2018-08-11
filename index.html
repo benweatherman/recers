@@ -1,0 +1,292 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+<!-- Steps form -->
+<div class="card">
+    <div class="card-body mb-4">
+
+        <h2 class="text-center font-weight-bold pt-4 pb-5"><strong>Larry Turner 2018 Registration</strong></h2>
+
+        <!-- Stepper -->
+        <div class="steps-form">
+            <div class="steps-row setup-panel">
+                <div class="steps-step">
+                    <a href="#step-start" type="button" class="btn btn-indigo btn-circle step"><i class="fa far fa-address-card" aria-hidden="true"></i></a>
+                    <p>Contact Info</p>
+                </div>
+                <div class="steps-step">
+                    <a href="#step-team-members" type="button" class="btn btn-default btn-circle step" disabled="disabled"><i class="fa fa-space-shuttle" aria-hidden="true"></i></a>
+                    <p>Team Members</p>
+                </div>
+                <div class="steps-step">
+                    <a href="#step-payment" type="button" class="btn btn-default btn-circle step" disabled="disabled"><i class="far fa-credit-card" aria-hidden="true"></i></a>
+                    <p>Payment</p>
+                </div>
+                <div class="steps-step">
+                    <a href="#step-confirmation" type="button" class="btn btn-default btn-circle step" disabled="disabled"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    <p>Review &amp; Confirm</p>
+                </div>
+            </div>
+        </div>
+
+        <form role="form" action="" method="post">
+
+            <!-- First Step -->
+            <div class="row setup-content" id="step-start">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Contact Info</strong></h3>
+
+                    <div class="row">
+                        <div class="form-group md-form col">
+                            <label for="teamName" data-error="wrong" data-success="right">Team Name</label>
+                            <input id="teamName" type="text" required="required" class="form-control validate">
+                        </div>
+                        <div class="form-group md-form col-3">
+                            <label for="teamColors" data-error="wrong" data-success="right">Team Colors</label>
+                            <input id="teamColors" type="text" required="required" class="form-control validate">
+                        </div>
+                        <div class="form-group md-form col-2">
+                                <label for="teamDivision" data-error="wrong" data-success="right">Division</label>
+                                <select class="form-control custom-select" id="teamDivision">
+                                    <option>Adult D2</option>
+                                    <option>Adult D3</option>
+                                    <option>Varsity</option>
+                                    <option>JV</option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <div class="form-group md-form">
+                        <label for="contactName" data-error="wrong" data-success="right">Contact Name</label>
+                        <input id="contactName" type="text" required="required" class="form-control validate">
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group md-form col">
+                            <label for="phone" data-error="wrong" data-success="right">Phone</label>
+                            <input id="phone" type="tel" required="required" class="form-control validate">
+                        </div>
+                        <div class="form-group md-form col">
+                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                            <input id="email" type="email" required="required" class="form-control validate">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-indigo btn-rounded btn-primary btn-lg btn-block next" type="button">Next</button>
+                </div>
+            </div>
+
+            <!-- Second Step -->
+            <div class="row setup-content" id="step-team-members">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Team Info</strong></h3>
+                    <div class="row">
+                        <div class="form-group md-form col">
+                            <label for="coachName" data-error="wrong" data-success="right">Coach</label>
+                            <input id="coachName" type="text" required="required" class="form-control validate">
+                        </div>
+                        <div class="form-group md-form col">
+                            <label for="assistantCoachName" data-error="wrong" data-success="right">Assistant Coach</label>
+                            <input id="assistantCoachName" type="text" required="required" class="form-control validate">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr class="d-flex">
+                                    <th scope="col" class="col">Player Name</th>
+                                    <th scope="col" class="col-1">Class</th>
+                                    <th scope="col" class="col-1">Jersey #</th>
+                                    <th scope="col" class="col-2">Shirt Size</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="d-flex">
+                                <th scope="row" class="col">
+                                    <input id="playerName1" type="text" required="required" class="form-control validate" value="Lee">
+                                </th>
+                                <td class="col-1">
+                                    <input id="playerClass1" type="text" required="required" class="form-control validate" value="4.5">
+                                </td>
+                                <td class="col-1">
+                                    <input id="playerNumber1" type="text" required="required" class="form-control validate" value="8">
+                                </td>
+                                <td class="col-2">
+                                    <select class="form-control custom-select" id="playerShirtSize1">
+                                        <option>Small</option>
+                                        <option>Medium</option>
+                                        <option>Large</option>
+                                        <option>X Large</option>
+                                        <option selected>2X Large</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr class="d-flex">
+                                <th scope="row" class="col">
+                                    <input id="playerName1" type="text" required="required" class="form-control validate" value="Ben">
+                                </th>
+                                <td class="col-1">
+                                    <input id="playerClass1" type="text" required="required" class="form-control validate" value="2">
+                                </td>
+                                <td class="col-1">
+                                    <input id="playerNumber1" type="text" required="required" class="form-control validate" value="22">
+                                </td>
+                                <td class="col-2">
+                                    <select class="form-control custom-select" id="playerShirtSize1">
+                                        <option>Small</option>
+                                        <option selected>Medium</option>
+                                        <option>Large</option>
+                                        <option>X Large</option>
+                                        <option>2X Large</option>
+                                    </select>
+                                </td>
+                                </tr>
+                                <tr class="d-flex">
+                                    <th scope="row" class="col">
+                                        <input id="playerName1" type="text" required="required" class="form-control validate" value="Fred">
+                                    </th>
+                                    <td class="col-1">
+                                        <input id="playerClass1" type="text" required="required" class="form-control validate" value="4">
+                                    </td>
+                                    <td class="col-1">
+                                        <input id="playerNumber1" type="text" required="required" class="form-control validate" value="12">
+                                    </td>
+                                    <td class="col-2">
+                                        <select class="form-control custom-select" id="playerShirtSize1">
+                                            <option>Small</option>
+                                            <option>Medium</option>
+                                            <option selected>Large</option>
+                                            <option>X Large</option>
+                                            <option>2X Large</option>
+                                        </select>
+                                    </td>
+                                    </tr>
+                                    <tr class="d-flex">
+                                            <th scope="row" class="col">
+                                                <input id="playerName1" type="text" required="required" class="form-control validate">
+                                            </th>
+                                            <td class="col-1">
+                                                <input id="playerClass1" type="text" required="required" class="form-control validate">
+                                            </td>
+                                            <td class="col-1">
+                                                <input id="playerNumber1" type="text" required="required" class="form-control validate">
+                                            </td>
+                                            <td class="col-2">
+                                                <select class="form-control custom-select" id="playerShirtSize1">
+                                                    <option>Small</option>
+                                                    <option>Medium</option>
+                                                    <option>Large</option>
+                                                    <option>X Large</option>
+                                                    <option>2X Large</option>
+                                                </select>
+                                            </td>
+                                          </tr>
+                                          <tr class="d-flex">
+                                                <th scope="row" class="col">
+                                                    <input id="playerName1" type="text" required="required" class="form-control validate">
+                                                </th>
+                                                <td class="col-1">
+                                                    <input id="playerClass1" type="text" required="required" class="form-control validate">
+                                                </td>
+                                                <td class="col-1">
+                                                    <input id="playerNumber1" type="text" required="required" class="form-control validate">
+                                                </td>
+                                                <td class="col-2">
+                                                    <select class="form-control custom-select" id="playerShirtSize1">
+                                                        <option>Small</option>
+                                                        <option>Medium</option>
+                                                        <option>Large</option>
+                                                        <option>X Large</option>
+                                                        <option>2X Large</option>
+                                                    </select>
+                                                </td>
+                                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn btn-indigo btn-rounded btn-primary btn-lg btn-block next" type="button">Next</button>
+                </div>
+            </div>
+
+            <!-- Third Step -->
+            <div class="row setup-content" id="step-payment">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Payment</strong></h3>
+                    <p>
+                        It's $100,000 to register
+                    </p>
+
+                    <div class="form-group">
+                        <label for="card-element">
+                          Enter your credit or debit card info
+                        </label>
+                        <div id="card-element">
+                          <!-- A Stripe Element will be inserted here. -->
+                        </div>
+                    
+                        <!-- Used to display form errors. -->
+                        <div id="card-errors" role="alert"></div>
+
+                        <small id="creditCardHelpBlock" class="form-text text-muted">
+                            You won't be charged until after the next step
+                        </small>
+                    </div>
+
+                    <button class="btn btn-indigo btn-rounded btn-primary btn-lg btn-block next" type="button">Next</button>
+                </div>
+            </div>
+
+            <!-- Fourth Step -->
+            <div class="row setup-content" id="step-confirmation">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Review &amp; Confirm</strong></h3>
+                    <p>
+                        This is where we might say you did a great job
+                    </p>
+                    <button class="btn btn-indigo btn-rounded btn-primary btn-lg btn-block" type="submit">Submit</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+<!-- Steps form -->
+  
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="/static/js/main.js" async></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
