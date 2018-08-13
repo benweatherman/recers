@@ -1,0 +1,218 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Larry Turner Classic 2018 Registration</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/lt-register.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+<!-- Steps form -->
+<div class="card">
+    <div class="card-body mb-4">
+
+        <h2 class="text-center font-weight-bold pt-4 pb-5"><strong>Larry Turner Classic 2018 Registration</strong></h2>
+
+        <!-- Stepper -->
+        <div class="steps-form">
+            <div class="steps-row setup-panel">
+                <div class="steps-step">
+                    <a href="#step-start" class="btn btn-indigo btn-circle step"><i class="far fa-address-card" aria-hidden="true"></i></a>
+                    <p>Contact Info</p>
+                </div>
+                <div class="steps-step">
+                    <a href="#step-team" class="btn btn-default btn-circle step"><i class="far fa-star" aria-hidden="true"></i></a>
+                    <p>Team Members</p>
+                </div>
+                <div class="steps-step">
+                    <a href="#step-payment" class="btn btn-default btn-circle step"><i class="far fa-credit-card" aria-hidden="true"></i></a>
+                    <p>Payment</p>
+                </div>
+                <div class="steps-step">
+                    <a href="#step-confirmation" class="btn btn-default btn-circle step"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    <p>Review &amp; Confirm</p>
+                </div>
+            </div>
+        </div>
+
+        <form action="/yolo" method="POST">
+
+            <!-- First Step -->
+            <div class="row setup-content" id="step-start">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Contact Info</strong></h3>
+
+                    <div class="row">
+                        <div class="form-group md-form col">
+                            <label for="teamName" data-error="wrong" data-success="right">Team Name</label>
+                            <input id="teamName" type="text" data-storage-key="team.name" class="form-control validate">
+                        </div>
+                        <div class="form-group md-form col-3">
+                            <label for="teamColors" data-error="wrong" data-success="right">Team Colors</label>
+                            <input id="teamColors" type="text" data-storage-key="team.colors" class="form-control validate">
+                        </div>
+                        <div class="form-group md-form col-2">
+                                <label for="division" data-error="wrong" data-success="right">Division</label>
+                                <select class="form-control custom-select" data-storage-key="division" id="division">
+                                    <option>Adult D2</option>
+                                    <option>Adult D3</option>
+                                    <option>Varsity</option>
+                                    <option>JV</option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <div class="form-group md-form">
+                        <label for="contactName" data-error="wrong" data-success="right">Contact Name</label>
+                        <input id="contactName" type="text" data-storage-key="contact.name" class="form-control validate">
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group md-form col">
+                            <label for="phone" data-error="wrong" data-success="right">Phone</label>
+                            <input id="phone" type="tel" data-storage-key="contact.phone" class="form-control validate">
+                        </div>
+                        <div class="form-group md-form col">
+                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                            <input id="email" type="email" data-storage-key="contact.email" class="form-control validate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Step -->
+            <div class="row setup-content d-none" id="step-team">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Team Info</strong></h3>
+                    <div class="row">
+                        <div class="form-group md-form col">
+                            <label for="coachName" data-error="wrong" data-success="right">Coach</label>
+                            <input id="coachName" type="text" data-storage-key="coach" class="form-control validate">
+                        </div>
+                        <div class="form-group md-form col">
+                            <label for="assistantCoachName" data-error="wrong" data-success="right">Assistant Coach</label>
+                            <input id="assistantCoachName" data-storage-key="assistantCoach" type="text" class="form-control validate">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr class="d-flex">
+                                        <th scope="col" class="col">Player Name</th>
+                                        <th scope="col" class="col-1">Class</th>
+                                        <th scope="col" class="col-1">Jersey #</th>
+                                        <th scope="col" class="col-2">Shirt Size</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="jsPlayersBody">
+                                    <tr class="d-flex">
+                                        <th scope="row" class="col">
+                                            <input id="player1Name" type="text" data-storage-key="players.0.name" class="form-control validate">
+                                        </th>
+                                        <td class="col-1">
+                                            <input id="player1Class" type="text" data-storage-key="players.0.class" class="form-control validate">
+                                        </td>
+                                        <td class="col-1">
+                                            <input id="player1Number" type="text" data-storage-key="players.0.number" class="form-control validate">
+                                        </td>
+                                        <td class="col-2">
+                                            <select class="form-control custom-select" data-storage-key="players.0.shirt" id="player1ShirtSize">
+                                                <option>Small</option>
+                                                <option>Medium</option>
+                                                <option>Large</option>
+                                                <option>X Large</option>
+                                                <option>2X Large</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- <button class="col-2 btn btn-link btn-lg btn-block previous" type="button">Previous</button> -->
+                        <div class="col">
+                            <button id="jsAddPlayer" class="btn btn-block">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                Add Player
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Step -->
+            <div class="row setup-content d-none" id="step-payment">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Payment</strong></h3>
+                    <p>
+                        It's $100,000 to register
+                    </p>
+
+                    <div class="form-group">
+                        <!-- <label for="card-element">
+                          Enter your credit or debit card info
+                        </label> -->
+                        <div id="card-element">
+                          <!-- A Stripe Element will be inserted here. -->
+                        </div>
+                    
+                        <!-- Used to display form errors. -->
+                        <div id="card-errors" role="alert" class="d-none alert alert-danger"></div>
+
+                        <small id="creditCardHelpBlock" class="form-text text-muted">
+                            You won't be charged until after the next step
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fourth Step -->
+            <div class="row setup-content d-none" id="step-confirmation">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Review &amp; Confirm</strong></h3>
+                    <p>
+                        This is where we might say you did a great job
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <button class="col-2 btn btn-link btn-lg btn-block previous" type="button">Previous</button>
+                <div class="col">
+                    <button class="btn btn-rounded btn-primary btn-lg btn-block next d-flex align-items-center justify-content-center" type="button">
+                        <div class="pr-3 text">Next</div>
+                        <div class="loader lds-loader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<!-- Steps form -->
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js" integrity="sha256-/GKyJ0BQJD8c8UYgf7ziBrs/QgcikS7Fv/SaArgBcEI=" crossorigin="anonymous"></script>
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>
