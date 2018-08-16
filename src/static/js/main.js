@@ -214,5 +214,7 @@ function render() {
         button.type = 'button';
     }
 
+    document.querySelector('#jsPaymentToken').value = data.payment.token;
+
     history.pushState({}, '', activeSelector);
 }
