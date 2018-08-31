@@ -1,0 +1,22 @@
+body {
+  font-size: 12px;
+}
+
+.jumbotron {
+  background-color: rgb(217,95,50);
+  color: #FFF;
+  background-image: url(../img/bg2.png);
+  background-size: cover;
+  background-position: 50% 75%;
+  min-height: 67vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron img {
+  max-width: 12rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
