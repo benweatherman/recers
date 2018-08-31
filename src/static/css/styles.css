@@ -20,3 +20,24 @@ body {
   top: 2rem;
   left: 2rem;
 }
+
+.bg-dark {
+  background-color: rgb(48, 60, 123) !important;
+}
+
+.bg-primary {
+  background-color: rgb(217,95,50) !important; 
+}
+
+.flex-equal > * {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+}
