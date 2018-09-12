@@ -9,7 +9,7 @@ h4,
 h5 {
   font-family: "khand";
   text-transform: uppercase;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
 }
 
 .jumbotron {
@@ -30,6 +30,12 @@ h5 {
   font-size: 7rem;
   color: rgba(255,255,255,.9);
   letter-spacing: -0.125rem;
+  line-height: 1;
+}
+
+.jumbotron h1 em {
+  color: rgba(255,255,255,.6);
+  font-style: normal;
 }
 
 .navbar {
@@ -48,11 +54,20 @@ h5 {
 }
 
 .bg-dark {
-  background-color: rgb(33,37,41) !important;
+  background-color: rgb(57,50,57) !important;
+  color: rgba(255,255,255,.67) !important;
 }
 
 .bg-primary {
   background-color: rgb(217,95,50) !important;
+  color: rgba(255,255,255,.67) !important;
+}
+
+.bg-dark a,
+.bg-dark h2,
+.bg-primary a,
+.bg-primary h2 {
+  color: rgb(255,255,255) !important;
 }
 
 .flex-equal > * {
