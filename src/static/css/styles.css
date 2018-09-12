@@ -12,6 +12,19 @@ h5 {
   margin-bottom: 2rem;
 }
 
+sup {
+  vertical-align: middle;
+  margin: 0 .25rem;
+  position: relative;
+  top: -.125rem;
+}
+
+.bg-primary iframe {
+  max-width: 426px !important;
+  margin: 2rem auto;
+  display: block;
+}
+
 .jumbotron {
   background-color: rgb(217,95,50);
   color: rgba(255,255,255,.8);
