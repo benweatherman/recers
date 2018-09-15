@@ -7,7 +7,7 @@ const style = {
 const CARD_ELEMENT = STRIPE.elements().create('card', {style});
 
 document.addEventListener('DOMContentLoaded', function() {
-    setupStepButtons();
+    setupStepButtons()
     setupPreviousButton();
     setupNextButton();
 
