@@ -5,5 +5,5 @@
 It's just static content right now, so fire up a python server
 
 ```bash
-python3 -m http.server --directory ./src
+python3 -m http.server --directory ./
 ```
