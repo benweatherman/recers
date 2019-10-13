@@ -2,9 +2,32 @@ body {
   font-size: 12px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "khand";
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+sup {
+  vertical-align: middle;
+  margin: 0 .25rem;
+  position: relative;
+  top: -.125rem;
+}
+
+.bg-primary iframe {
+  max-width: 426px !important;
+  margin: 2rem auto;
+  display: block;
+}
+
 .jumbotron {
   background-color: rgb(217,95,50);
-  color: #FFF;
+  color: rgba(255,255,255,.8);
   background-image: url(../img/bg2.png);
   background-size: cover;
   background-position: 50% 75%;
@@ -12,21 +35,52 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
-.jumbotron img {
-  max-width: 12rem;
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
+.jumbotron h1 {
+  text-shadow: 0 2px rgba(0,0,0,.5);
+  font-size: 7rem;
+  color: rgba(255,255,255,.9);
+  letter-spacing: -0.125rem;
+  line-height: 1;
+}
+
+.jumbotron h1 em {
+  color: rgba(255,255,255,.6);
+  font-style: normal;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.navbar img {
+  max-width: 5rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  /*
+  background-color: rgba(0,0,0,.25);
+  box-shadow: 0 1px 0 rgba(0,0,0,.5);
+  */
 }
 
 .bg-dark {
-  background-color: rgb(48, 60, 123) !important;
+  background-color: rgb(57,50,57) !important;
+  color: rgba(255,255,255,.67) !important;
 }
 
 .bg-primary {
-  background-color: rgb(217,95,50) !important; 
+  background-color: rgb(217,95,50) !important;
+  color: rgba(255,255,255,.67) !important;
+}
+
+.bg-dark a,
+.bg-dark h2,
+.bg-primary a,
+.bg-primary h2 {
+  color: rgb(255,255,255) !important;
 }
 
 .flex-equal > * {
